@@ -38,7 +38,7 @@
 > ## Running the application
 >
 > -   open terminal in the project root directory
-> -   Run `node app.js` > <br><br>
+> -   Run `node app.js` <br><br>
 
 > ## From the developer
 >
