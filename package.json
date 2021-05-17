@@ -1,0 +1,26 @@
+{
+  "name": "covid-slots-project",
+  "version": "1.0.0",
+  "description": "An app that keeps track of currently available slots and reports to registered users",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "test"
+  },
+  "keywords": [
+    "covid",
+    "vaccine",
+    "covidshield",
+    "corona"
+  ],
+  "author": "Pallab JS",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1",
+    "simple-node-logger": "^18.12.24",
+    "twilio": "^3.62.0"
+  }
+}
