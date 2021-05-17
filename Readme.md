@@ -42,5 +42,5 @@
 
 > ## From the developer
 >
-> _This project was initiated to fulfill a personal need. <br> However if you liked the idea and feel it's useful and want to work on extending it to make it effetively usable, let me know by sending a email to pallabjyotisingha@email.com, I will consider making it open source.<br>
+> _This project was initiated to fulfill a personal need. <br> However if you liked the idea and feel it's useful and want to work on extending it to make it effetively usable, let me know by sending an <a href="mailto:pallabjyotisingha@email.com">email</a>, I will consider making it open source.<br>
 > I will appreciate a star for this one. <br> Thanks!_ <br><br>
