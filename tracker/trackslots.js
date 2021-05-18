@@ -11,11 +11,11 @@ import { exec } from "child_process";
 let district_id = 764; // district_id for 'Hojai'
 
 // Change date here to check availability
-// Date hardcoding
-let startDate = "16-05-2021";
+// Date hardcoding (date to book for - tomorrow's date)
+let startDate = "19-05-2021";
 
 // setting date to check as tomorrow(comment to use hardcoded date)
-// startDate = getNextDateFormatted(1);
+startDate = getNextDateFormatted(1);
 
 // This helps incrememting the date
 let startDayCount = 0;
@@ -24,6 +24,10 @@ let notifiedBySms = false;
 let phoneNumberToSms = process.env.PHONE_NUMBER;
 
 export function startTracking() {
+    log.info(`
+            SMS     : ${phoneNumberToSms}
+            DATE    : ${startDate}
+        `);
     let loopId = setInterval(() => {
         // let date = getNextDateFormatted(startDayCount);
 
@@ -61,7 +65,7 @@ export function startTracking() {
                                 log.debug("\n------------ Tracking Ended -------------");
                             }
                         } else {
-                            log.info(`Check for date: ${date}} \n No slots available yet.`);
+                            log.info(`Checking for date: ${date} \n No slots available yet.`);
                         }
                     });
                 }
@@ -77,7 +81,7 @@ function getAllAvailableSlots(data) {
     let slots_available = [];
     for (let center of data.centers) {
         let session = center.sessions[0];
-        if (session.min_age_limit === 18 && session.available_capacity === 0) {
+        if (session.min_age_limit === 18 && session.available_capacity > 0) {
             let slotData = {
                 age: session.min_age_limit,
                 date: session.date,
